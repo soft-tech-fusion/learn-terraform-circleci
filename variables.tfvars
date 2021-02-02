@@ -1,4 +1,4 @@
 region = "eu-west-2"
 user = "soft-tech-fusion"
-label = "techfusion.fun"
+label = "techfusion.test"
 app = "terramino"
