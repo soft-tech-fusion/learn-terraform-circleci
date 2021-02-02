@@ -6,6 +6,24 @@ terraform {
   }
 }
 
+/* This sets up project to use S3 remote backend */
+
+terraform {
+  required_version = ">= 0.14"
+  backend "s3" {
+    bucket         = "techfusion-state-bucket"
+    key            = "global/s3/dev/ub-ssh/terraform.tfstate"
+    region         = "eu-west-2"
+    /* IMPORTANT!! 
+    This needs to be commented on first pass 
+    */
+    #############################################
+    dynamodb_table = "techfusion-state-table"
+    #############################################
+    encrypt        = true
+  }
+}
+
 provider "aws" {
   region = var.region
 }
