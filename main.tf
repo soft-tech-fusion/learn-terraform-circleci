@@ -12,7 +12,7 @@ terraform {
   required_version = ">= 0.14"
   backend "s3" {
     bucket         = "techfusion-state-bucket"
-    key            = "global/s3/dev/ub-ssh/terraform.tfstate"
+    key            = "global/s3/dev/circle-ci/terraform.tfstate"
     region         = "eu-west-2"
     /* IMPORTANT!! 
     This needs to be commented on first pass 
