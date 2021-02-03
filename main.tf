@@ -28,9 +28,10 @@ provider "aws" {
   region = var.region
 }
 
+/*
 provider "template" {
 }
-
+*/
 resource "random_uuid" "randomid" {}
 
 resource "aws_iam_user" "circleci" {
